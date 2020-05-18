@@ -1,0 +1,49 @@
+page {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0;
+  bottom: 360rpx;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0px;
+  top: 0;
+ 
+}
+.clearfix::after{
+  content: '';
+  clear: both;
+  display: block;
+}
+image{
+  width: 100%;
+  height: 100%;
+}
+.bot{
+  width: 100%;
+  height: 40rpx;
+  position: fixed;
+  bottom: 20rpx;
+  left: 0;
+}
+.container .c-title{
+  font-size: 30rpx;
+  padding: 30rpx 20rpx 0;
+  font-weight: 600;
+  text-align: center;
+}
+.container .c-context{
+  font-size: 26rpx;
+  padding: 0 20rpx;
+}

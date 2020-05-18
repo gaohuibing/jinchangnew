@@ -1,0 +1,20 @@
+{
+  "pages":[
+    "pages/guanlian/guanlian",
+    "pages/xuelian/xuelian",
+    "pages/index/index",
+   
+    
+    "pages/xunlian/xunlian",
+    "pages/jianlian/jianlian",
+    "pages/youlian/youlian"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "廉政",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

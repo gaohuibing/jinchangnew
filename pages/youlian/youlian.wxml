@@ -1,0 +1,19 @@
+<view class="bg">
+	<image src="../../images/bg6.jpg"></image>
+</view>
+<view class="container">
+	<view class="c-title">
+		“绣丽金阊 至德善廉”廉政观览线
+	</view>
+	<view class="c-context">
+		<text decode="{{true}}" space="{{true}}">
+		{{space}}古韵阊门，历史悠久。金阊辖区处处古迹，底蕴深厚。金阊街道将特色“廉洁风景”串联成线，打造一条线上的“绣丽金阊 至德善廉”廉政观览线，在清正廉洁的氛围中得到熏陶。
+		</text>
+	</view>
+    <view class="map" bindtap="miniLink">
+        <image src="../../images/map.jpg"></image>
+    </view>
+</view>
+<view class="bot">
+	<image src="../../images/bottom.png"></image>
+</view>

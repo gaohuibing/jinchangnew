@@ -1,0 +1,50 @@
+.logo{
+    width: 170rpx;
+    height: 720rpx;
+    float: left;
+    margin: 100rpx 20rpx 0 ;
+}
+.clearfix{
+    padding-top: 40rpx;
+}
+.tit-list{
+    width: 470rpx;
+    float: left;
+    font-size: 20rpx;
+    display: flex;
+    margin-top: 70rpx;
+}
+.tit-list .item{
+    padding: 0 10rpx;
+    border-left: 4rpx solid #333;
+}
+.tit-list .item:last-child{
+    border-right: 4rpx solid #333;
+}
+.tit-list .tit{
+    width: 52rpx;
+    height: 110rpx;
+    margin: 0 auto;
+}
+.tit-list .c-list{
+    display: flex;
+    /* margin-top: 20rpx; */
+}
+.tit-list .c-list>view{
+    width:26rpx;
+    line-height: 26rpx;
+}
+.tit-list .c-list .st{
+    font-weight: 600;
+}
+.logo2{
+    width: 45rpx;
+    height: 75rpx;
+    float: left;
+    margin-top: 70rpx;
+}
+.time{
+    width: 100%;
+    height: 40rpx;
+    margin-top: 10rpx;
+}

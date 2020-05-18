@@ -1,0 +1,6 @@
+/* pages/youlian/youlian.wxss */
+.map {
+    width: 750rpx;
+    height: 529rpx;
+    margin-top:140rpx
+}

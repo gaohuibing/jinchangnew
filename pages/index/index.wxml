@@ -1,0 +1,98 @@
+<view class="bg">
+	<image src="../../images/sy_bg.png"></image>
+</view>
+<view class="container" style="bottom:0">
+	<view class="clearfix">
+		<view class="logo">
+			<image src="../../images/logo.png"></image>
+		</view>
+		<view class="tit-list">
+			<view class="item">
+				<view class="tit">
+					<image src="../../images/sy_tit1.png"></image>
+				</view>
+				<view class="c-list">
+					<view class="st">
+						不忘初心 ，廉洁奉公勇担当主题党日
+					</view>
+					<view class="nor">
+						进一步加强党风廉政建设 ，增强担当意识 ，营造风清气正的氛围。
+					</view>
+				</view>
+			</view>
+			<view class="item">
+				<view class="tit">
+					<image src="../../images/sy_tit2.png"></image>
+				</view>
+				<view class="c-list">
+					<view class="st">
+						皮影戏《 泰伯三让 》
+					</view>
+					<view class="nor">
+						孔子曰：“ 泰伯 ，其可谓至德也已矣。” 泰伯为国家前程大公
+					</view>
+					<view class="nor">
+						无私三让王位，后又避居江南，断发纹身，开荒种地福泽吴地。
+					</view>
+				</view>
+			</view>
+			<view class="item">
+				<view class="tit">
+					<image src="../../images/sy_tit3.png"></image>
+				</view>
+				<view class="c-list">
+					<view class="st">
+						绣丽金阊 至德善廉廉政观览线
+					</view>
+					<view class="nor">
+						古韵阊门 ，历史悠久 。 金阊辖区处处古迹，底蕴深厚 。 金阊街道
+					</view>
+					<view class="nor">
+						将 “ 廉洁风景 ”串联成一条 “ 绣丽金阊 至德善廉 ” 廉政观览线。
+					</view>
+				</view>
+			</view>
+			<view class="item">
+				<view class="tit">
+					<image src="../../images/sy_tit4.png"></image>
+				</view>
+				<view class="c-list">
+					<view class="st">
+						至德善廉征文
+					</view>
+					<view class="nor">
+						寻集姑苏历史人物廉洁小故事 、 身边凡人善举爱岗敬业小故
+					</view>
+					<view class="nor">
+						事 、百姓家风家训故事等 。
+					</view>
+				</view>
+			</view>
+			<view class="item">
+				<view class="tit">
+					<image src="../../images/sy_tit5.png"></image>
+				</view>
+				<view class="c-list">
+					<view class="st">
+						生活垃圾分类管理护廉行动
+					</view>
+					<view class="nor">
+						在生活垃圾分类管理工作中 ，充分发挥好党内监督 、群众监督 、
+					</view>
+					<view class="nor">
+						社会监督 、舆论监督的作用 ,做到专人负责 、全程监督 。
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="logo2">
+			<image src="../../images/zhang.png"></image>
+		</view>
+	</view>
+	<view class="time">
+		<image src="../../images/time.png"></image>
+	</view>
+</view>
+<view class="bot">
+	<image src="../../images/bottom.png"></image>
+</view>

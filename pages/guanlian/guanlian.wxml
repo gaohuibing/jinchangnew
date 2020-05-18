@@ -1,0 +1,9 @@
+<view class="bg">
+	<image src="../../images/bg3.jpg"></image>
+</view>
+<view class="container">
+	<video src="{{video}}"></video>
+</view>
+<view class="bot">
+	<image src="../../images/bottom.png"></image>
+</view>
