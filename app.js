@@ -5,6 +5,7 @@ App({
 
   },
   globalData: {
-      space:"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+      space:"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",
+      api:'https://jcxcx.sunkoda.com'
   }
 })

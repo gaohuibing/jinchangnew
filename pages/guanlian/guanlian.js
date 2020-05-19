@@ -1,4 +1,5 @@
 // pages/guanlian/guanlian.js
+const app = getApp()
 import qqVideo from "../../utils/qqVideo.js"
 Page({
 
@@ -6,20 +7,20 @@ Page({
      * 页面的初始数据
      */
     data: {
-        video: ''
+        space: app.globalData.space,
+        video1: '',
+        video2: '',
+        video2Obj: {},
+        video3: '',
+        video3Obj: {}
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        const that = this;
-        qqVideo.getVideoes('c305036hcsj').then(function (response) {
-            console.log(response)
-            that.setData({
-                video: response[0]
-            })
-        })
+        this.loadVideos()
+
     },
 
     /**
@@ -35,39 +36,45 @@ Page({
     onShow: function () {
 
     },
+    loadVideos() {
+        const that = this;
+        wx.request({
+            url: app.globalData.api + '/api/get_video',
+            method: 'POST',
+            dataType: 'json',
+            responseType: 'text',
+            success: res => {
+                console.log(res)
+                if (res.statusCode == '200') {
+                    let video1Obj = res.data[0];
+                    let video2Obj = res.data[1];
+                    let video3Obj = res.data[2];
 
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload: function () {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh: function () {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom: function () {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function () {
-
+                    qqVideo.getVideoes(video1Obj.set[0].vid).then(function (response) {
+                        console.log(response)
+                        that.setData({
+                            video1: response[0]
+                        })
+                    })
+                    qqVideo.getVideoes(video2Obj.set[0].vid).then(function (response) {
+                        console.log(response)
+                        that.setData({
+                            video2: response[0]
+                        })
+                    })
+                    qqVideo.getVideoes(video3Obj.set[0].vid).then(function (response) {
+                        that.setData({
+                            video3: response[0]
+                        })
+                    })
+                    that.setData({
+                        video2Obj: video2Obj,
+                        video3Obj: video3Obj,
+                    })
+                    
+                }
+            }
+        })
     }
+
 })

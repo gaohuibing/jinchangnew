@@ -1,1 +1,33 @@
 /* pages/guanlian/guanlian.wxss */
+.video{
+    margin: 30rpx auto;
+    display: block;
+    width: 600rpx;
+}
+.v-tit{
+    font-size: 28rpx;
+    font-weight: 600;
+    text-align: center;
+}
+.v-item{
+    width: 600rpx;
+    margin: 10rpx auto;
+}
+.s-tit{
+    font-size: 26rpx;
+    width: 600rpx;
+}
+.jis-box{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 24rpx;
+}
+.j-item{
+    font-size: 26rpx;
+    color: #fff;
+    background:#a8464a;
+    border-radius: 8rpx;
+    margin-right: 40rpx;
+    margin-bottom: 24rpx;
+    padding: 5rpx 10rpx;
+}

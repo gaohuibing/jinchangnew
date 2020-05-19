@@ -2,7 +2,33 @@
 	<image src="../../images/bg3.jpg"></image>
 </view>
 <view class="container">
-	<video src="{{video}}"></video>
+	<view class="c-title">
+		皮影戏《秦伯三让》
+	</view>
+	<view class="c-context">
+		<text decode="{{true}}" space="{{true}}">
+		{{space}}皮影戏《秦伯三让》是金阊街道与国家级非物质文化遗产皮影戏传承人合作创作，既与史实相符也贴合新时代特征。
+		该剧以秦伯三让王位的历史故事为蓝本，讲述了秦伯为国家前程三让王位的大公无私故事，及之后避居江南，断发纹身，开荒种地福泽昊地的故事。
+		</text>
+	</view>
+	<view class="v-item">
+		<video src="{{video1}}" class="video"></video>
+	</view>
+	<view class="v-item">
+		<view class="v-tit">
+			《{{video2Obj.name}}》
+		</view>
+		<video src="{{video2}}" class="video"></video>
+		<view class="s-tit">
+			第一集：啥来得快
+		</view>
+		<view class="jis-box">
+			<block wx:for="{{video2Obj.set}}" wx:key="index">
+				<view class="j-item" bindtap="">第{{index+1}}集</view>
+			</block>
+		</view>
+	</view>
+
 </view>
 <view class="bot">
 	<image src="../../images/bottom.png"></image>
