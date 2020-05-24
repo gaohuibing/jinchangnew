@@ -20,15 +20,28 @@
 		</view>
 		<video src="{{video2}}" class="video"></video>
 		<view class="s-tit">
-			第一集：啥来得快
+			{{video2Text}}
 		</view>
 		<view class="jis-box">
 			<block wx:for="{{video2Obj.set}}" wx:key="index">
-				<view class="j-item" bindtap="">第{{index+1}}集</view>
+				<view class="j-item" bindtap="video2Handle" data-item="{{item}}">第{{index+1}}集</view>
 			</block>
 		</view>
 	</view>
-
+<view class="v-item">
+		<view class="v-tit">
+			《{{video3Obj.name}}》
+		</view>
+		<video src="{{video3}}" class="video"></video>
+		<view class="s-tit">
+			{{video3Text}}
+		</view>
+		<view class="jis-box">
+			<block wx:for="{{video3Obj.set}}" wx:key="index">
+				<view class="j-item" bindtap="video3Handle" data-item="{{item}}">第{{index+1}}集</view>
+			</block>
+		</view>
+	</view>
 </view>
 <view class="bot">
 	<image src="../../images/bottom.png"></image>

@@ -27,7 +27,7 @@
     color: #fff;
     background:#a8464a;
     border-radius: 8rpx;
-    margin-right: 40rpx;
+    margin-right: 60rpx;
     margin-bottom: 24rpx;
     padding: 5rpx 10rpx;
 }
