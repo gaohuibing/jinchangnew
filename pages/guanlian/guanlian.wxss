@@ -1,8 +1,8 @@
 /* pages/guanlian/guanlian.wxss */
 .video{
-    margin: 30rpx auto;
+    margin: 10rpx auto;
     display: block;
-    width: 600rpx;
+    width: 200rpx;
 }
 .v-tit{
     font-size: 28rpx;
@@ -11,11 +11,13 @@
 }
 .v-item{
     width: 600rpx;
-    margin: 10rpx auto;
+    margin: 30rpx auto 0;
 }
 .s-tit{
-    font-size: 26rpx;
+    font-size: 24rpx;
     width: 600rpx;
+    text-align: center;
+    color: #999;
 }
 .jis-box{
     display: flex;

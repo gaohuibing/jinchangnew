@@ -14,7 +14,8 @@ Page({
         video2Obj: {},
         video3: '',
         video3Text: '',
-        video3Obj: {}
+        video3Obj: {},
+        data: []
     },
 
     /**
@@ -47,32 +48,35 @@ Page({
             responseType: 'text',
             success: res => {
                 if (res.statusCode == '200') {
-                    let video1Obj = res.data[0];
-                    let video2Obj = res.data[1];
-                    let video3Obj = res.data[2];
+                    // let video1Obj = res.data[0];
+                    // let video2Obj = res.data[1];
+                    // let video3Obj = res.data[2];
 
-                    qqVideo.getVideoes(video1Obj.set[0].vid).then(response => {
-                        that.setData({
-                            video1: response[0]
-                        })
-                    }).then(h => {
-                        qqVideo.getVideoes(video2Obj.set[0].vid).then(function (response) {
-                            that.setData({
-                                video2: response[0]
-                            })
-                        })
-                    }).then(h => {
-                        qqVideo.getVideoes(video3Obj.set[0].vid).then(function (response) {
-                            that.setData({
-                                video3: response[0]
-                            })
-                        })
-                    })
-                    that.setData({
-                        video2Obj: video2Obj,
-                        video3Obj: video3Obj,
-                        video2Text: '第' + video2Obj.set[0].profile.split('第')[1],
-                        video3Text: '第' + video3Obj.set[0].profile.split('第')[1],
+                    // qqVideo.getVideoes(video1Obj.set[0].vid).then(response => {
+                    //     that.setData({
+                    //         video1: response[0]
+                    //     })
+                    // }).then(h => {
+                    //     qqVideo.getVideoes(video2Obj.set[0].vid).then(function (response) {
+                    //         that.setData({
+                    //             video2: response[0]
+                    //         })
+                    //     })
+                    // }).then(h => {
+                    //     qqVideo.getVideoes(video3Obj.set[0].vid).then(function (response) {
+                    //         that.setData({
+                    //             video3: response[0]
+                    //         })
+                    //     })
+                    // })
+                    // that.setData({
+                    //     video2Obj: video2Obj,
+                    //     video3Obj: video3Obj,
+                    //     video2Text: '第' + video2Obj.set[0].profile.split('第')[1],
+                    //     video3Text: '第' + video3Obj.set[0].profile.split('第')[1],
+                    // })
+                    this.setData({
+                        data: res.data
                     })
                 }
             }
@@ -103,6 +107,19 @@ Page({
         })
         this.setData({
             video3Text: '第' + item.profile.split('第')[1],
+        })
+    },
+    // 图片预览
+    imgYu(event) {
+        let src = event.currentTarget.dataset.src; //获取data-src        
+        let imgList = []; //获取
+        this.data.data.map(item => {
+            imgList.push(item.url)
+        })
+        //图片预览
+        wx.previewImage({
+            current: src, // 当前显示图片的http链接
+            urls: imgList // 需要预览的图片http链接列表            
         })
     }
 })
