@@ -10,7 +10,7 @@
 				</view>
 				<view class="item-des">
 					<view>{{item.name}}</view>
-					<view>{{item.create_at}}</view>
+					<view>{{item.created_at}}</view>
 				</view>
 			</view>
 		</view>

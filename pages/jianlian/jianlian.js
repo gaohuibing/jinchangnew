@@ -48,7 +48,7 @@ Page({
                 if (res.statusCode == '200') {
                     if (res.data.data.length) {
                         res.data.data.map(item => {
-                            item.created_at = app.$moment(item.created_at).format('YYYY-MM-DD')
+                            item.created_at = app.$moment(item.created_at*1000).format('YYYY-MM-DD')
                         })
                         console.log(res.data.data)
                         that.setData({
