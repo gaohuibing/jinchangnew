@@ -43,7 +43,7 @@ Page({
         const that = this;
         wx.request({
             url: app.globalData.api + '/api/get_video',
-            method: 'POST',
+            method: 'GET',
             dataType: 'json',
             responseType: 'text',
             success: res => {

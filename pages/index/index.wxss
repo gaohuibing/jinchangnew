@@ -28,6 +28,7 @@
 }
 .tit-list .c-list{
     display: flex;
+    font-family: '宋体';
     /* margin-top: 20rpx; */
 }
 .tit-list .c-list>view{

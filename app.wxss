@@ -47,3 +47,30 @@ image{
   font-size: 26rpx;
   padding: 0 20rpx;
 }
+
+.list-wrap{
+    box-sizing: border-box;
+    padding: 30rpx;  
+    width: 100%;  
+}
+.list-item{
+  border-bottom: 2px solid #000;
+  padding: 15rpx 20rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #000;
+}
+.list-item:first-child{
+  border-top: 2px solid #000;
+}
+.list-item .item-des{
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+  font-family: '宋体';
+}
+.comt{
+  padding: 20rpx;
+  font-size: 26rpx;
+}

@@ -1,35 +1,62 @@
 /* pages/guanlian/guanlian.wxss */
-.video{
+.video {
     margin: 10rpx auto;
     display: block;
     width: 200rpx;
 }
-.v-tit{
-    font-size: 28rpx;
+
+.v-tit {
+    font-size: 32rpx;
     font-weight: 600;
     text-align: center;
 }
-.v-item{
-    width: 600rpx;
-    margin: 30rpx auto 0;
+
+.v-tit1 {
+    font-size: 28rpx;
+    font-weight: 600;
+    text-align: center;
+    width: 200rpx;
+    margin: 0 auto;
 }
-.s-tit{
+
+.v-item {
+    width: 700rpx;
+    margin: 30rpx auto 0;
+    overflow: hidden;
+}
+
+.s-tit {
     font-size: 24rpx;
     width: 600rpx;
     text-align: center;
     color: #999;
 }
-.jis-box{
+
+.jis-box {
     display: flex;
     flex-wrap: wrap;
     margin-top: 24rpx;
 }
-.j-item{
+
+.j-item {
     font-size: 26rpx;
     color: #fff;
-    background:#a8464a;
+    background: #a8464a;
     border-radius: 8rpx;
     margin-right: 60rpx;
     margin-bottom: 24rpx;
     padding: 5rpx 10rpx;
+}
+
+.v-l {
+    width: 250rpx;
+    float: left;
+    text-align: center;
+}
+
+.v-r {
+    width: 400rpx;
+    float: right;
+    font-size: 26rpx;
+    color: #111;
 }

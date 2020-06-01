@@ -1,0 +1,16 @@
+<view class="bg">
+	<image src="../../../images/bg5.jpg"></image>
+</view>
+<view class="container">
+	<scroll-view style="width:100%; height:100%" scroll-y="{{true}}">
+		<view class="c-title">
+			{{title}}
+		</view>
+        <view class="comt">
+            <rich-text nodes="{{richContent}}" type = 'text'></rich-text>
+        </view>
+	</scroll-view>
+</view>
+<view class="bot">
+	<image src="../../../images/bottom.png"></image>
+</view>

@@ -1,10 +1,8 @@
 {
   "pages":[
+    "pages/index/index",
     "pages/guanlian/guanlian",
     "pages/xuelian/xuelian",
-    "pages/index/index",
-   
-    
     "pages/xunlian/xunlian",
     "pages/jianlian/jianlian",
     "pages/youlian/youlian"

@@ -1,19 +1,24 @@
 // pages/jianlian/jianlian.js
 const app = getApp()
+
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        space: app.globalData.space
+        space: app.globalData.space,
+        sort: 1,
+        page: 1,
+        limits: 10,
+        list: []
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        this.loadList()
     },
 
     /**
@@ -23,45 +28,50 @@ Page({
 
     },
 
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function () {
+    loadList() {
+        wx.showLoading({
+            title: '加载中',
+            mask: true,
+        })
+        const that = this;
+        wx.request({
+            url: app.globalData.api + '/api/get_article_list',
+            method: 'GET',
+            data: {
+                sort: that.data.sort,
+                page: that.data.page,
+                limits: that.data.limits
+            },
+            dataType: 'json',
+            responseType: 'text',
+            success: res => {
+                if (res.statusCode == '200') {
+                    if (res.data.data.length) {
+                        res.data.data.map(item => {
+                            item.created_at = app.$moment(item.created_at).format('YYYY-MM-DD')
+                        })
+                        console.log(res.data.data)
+                        that.setData({
+                            list: that.data.list.concat(res.data.data),
+                            page: that.data.page + 1
+                        })
+                    } else {
+                        wx.showToast({
+                            title: '没有更多了',
+                        })
+                    }
 
+                }
+            },
+            complete: res => {
+                wx.hideLoading()
+            }
+        })
     },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload: function () {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh: function () {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom: function () {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function () {
-
+    toDetails(e) {
+        const id = e.currentTarget.dataset.id;
+        wx.navigateTo({
+            url: './details/details?id=' + id,
+        })
     }
 })

@@ -1,19 +1,33 @@
-const formatTime = date => {
-  const year = date.getFullYear()
-  const month = date.getMonth() + 1
-  const day = date.getDate()
-  const hour = date.getHours()
-  const minute = date.getMinutes()
-  const second = date.getSeconds()
-
-  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+const escape2Html = (str) => {
+    var arrEntities = {
+          'lt': '<',
+          'gt': '>',
+          'nbsp': ' ',
+          'amp': '&',
+          'quot': '"',
+          'middot': '·',
+          'amp': '&',
+          'brvbar': '¦',
+          'mdash': '—',
+          'ndash': '–',
+          'ge': '≥',
+          'le': '≤',
+          'laquo': '«',
+          'raquo': '»',
+          'deg': '°',
+          'bull': '•',
+          'macr': '¯',
+          '#64': '@',
+          'rdquo': '“',
+          'ldquo': '”',
+    };
+    let body = str.replace(/&(lt|gt|nbsp|amp|quot|middot|amp|brvbar|mdash|ndash|ge|le|laquo|raquo|deg|bull|macr|#64|rdquo|ldquo);/ig, function(all, t) {
+          return arrEntities[t];
+    });
+  
+  let result =  body.replace(/\<p/g, '<p style="margin-block: 0;"')		
+  return result.replace(/style="" display="block"/g, 'style="display:block"')
 }
-
-const formatNumber = n => {
-  n = n.toString()
-  return n[1] ? n : '0' + n
-}
-
 module.exports = {
-  formatTime: formatTime
+    escape2Html:escape2Html
 }

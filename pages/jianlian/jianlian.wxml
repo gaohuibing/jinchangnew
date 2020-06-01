@@ -1,21 +1,20 @@
 <view class="bg">
-	<image src="../../images/bg4.jpg"></image>
+	<image src="../../images/bg5.jpg"></image>
 </view>
 <view class="container">
-	<view class="c-title">
-		倡议书
-	</view>
-	<view class="c-context">
-		<text decode="{{true}}" space="{{true}}">
-		{{space}}根据6月1日起实施的《苏州市生活垃圾分类管理办法》，加强苏州市生活垃圾分类管理，可控制污染，保护环境，节约资源，化害为利，变废为宝，是广大人民群众对美好生活的期盼。生活垃圾分类实施过程中需要通过充分发挥好党内监督、群众监督、社会监督、舆论监督等来保障落实。为此，我们向广大基层纪检工作者、勤廉监督员发出倡议：
-		{{space}}一、从我做起，争当垃圾分类先行者
-		{{space}}把垃圾分类当成我们责无旁贷的责任，自觉实行生活垃圾分类。认真学习相关规定，积极实施垃圾分类管理办法；少使用或不用一次性用品、塑料袋；少制造垃圾，特别是不易分解和有毒有害的垃圾，能循环再用的用品必须做到循环再用；掌握生活垃圾分类方法，按照分类标准对生活垃圾进行投放。
-		{{space}}二、义不容辞，争当垃圾分类监督者
-		{{space}}要当好垃圾分类的监督员，充分发挥社区纪委及勤廉监督员的基层监督作用，对垃圾分类工作进行“全过程”、“嵌入式”监督。根据“三定一督”的要求，时刻关注垃圾分类工作，及时纠正不分类投放或乱投放的行为，确保垃圾分类投放准确率。
-		{{space}}三、积极主动，争当垃圾分类传播者
-		{{space}}向家人、亲友和邻里做好垃圾分类相关知识的宣传，宣传减少垃圾生产、做好垃圾分类的理念和知识，引导他们主动参与到日常生活垃圾分类中。
-		</text>
-	</view>
+	<scroll-view bindscrolltolower='loadList' style="width:100%; height:100%" scroll-y="{{true}}">
+		<view class="list-wrap">
+			<view class="list-item" wx:for='{{list}}' wx:key="index" bindtap="toDetails" data-id="{{item.id}}">
+				<view class="item-tit">
+					[{{item.title}}]
+				</view>
+				<view class="item-des">
+					<view>{{item.name}}</view>
+					<view>{{item.create_at}}</view>
+				</view>
+			</view>
+		</view>
+	</scroll-view>
 </view>
 <view class="bot">
 	<image src="../../images/bottom.png"></image>

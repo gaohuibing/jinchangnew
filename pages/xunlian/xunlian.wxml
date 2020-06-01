@@ -2,27 +2,20 @@
 	<image src="../../images/bg4.jpg"></image>
 </view>
 <view class="container">
-	<view class="c-title">
-		金阊街道“至德善廉”征文启事
-	</view>
-	<view class="c-context">
-		<text decode="{{true}}" space="{{true}}">
-		{{space}}为坚持全面从严治党，深入推进党风廉政建设和反腐败斗争，努力营造“向上向善向廉”的社会氛围，金阊街道开展“至德善廉”征文活动，欢迎社会各界踊跃参与。
-		{{space}}一、活动主题
-		{{space}}活动主题为“至德善廉”。展示崇尚廉洁、遵纪守法、敬业爱岗、诚实守信等精神风貌和反腐倡廉建设取得的丰硕成果，倡导廉洁价值取向，弘扬社会主义核心价值观，营造积极健康向上的社会氛围。
-		{{space}}作品突出思想性、艺术性和观赏性，主题鲜明、导向正确，弘扬廉洁文化，涵养清风正气，传递崇尚廉洁的价值观念。
-		{{space}}二、征集内容
-		{{space}}作品体裁不限，内容为姑苏历史人物廉洁小故事、身边凡人善举爱岗敬业小故事、百姓家风家训故事等。
-		{{space}}所有参赛作品必须为原创作品，且没有参加过同类赛事。主办方拥有刊播、推广、出版作品的永久使用权，解释权归主办方所有。
-		{{space}}三、征集时间
-		{{space}}2020年8月1日至9月15日
-		{{space}}四、评奖表彰
-		{{space}}征集活动结束后，按照公正、公平和公开的原则进行评审。评审设置若干奖项，给予适当物质和精神奖励。
-		{{space}}五、投稿方式
-		{{space}}本次活动面向社会各界人士。纸质稿、电子稿投稿均可。请在作品末尾注明作者姓名、单位、通讯地址、联系方式等。
-		{{space}}金阊街道各社区均可投稿。
-		</text>
-	</view>
+	<scroll-view bindscrolltolower='loadList' style="width:100%; height:100%" scroll-y="{{true}}">
+		<view class="list-wrap">
+			<view class="list-item" wx:for='{{list}}' wx:key="index" bindtap="toDetails" data-id="{{item.id}}">
+				<view class="item-tit">
+					[{{item.title}}]
+				</view>
+				<view class="item-des">
+					<view>{{item.name}}</view>
+					<view>{{item.create_at}}</view>
+				</view>
+			</view>
+		</view>
+	</scroll-view>
+
 </view>
 <view class="bot">
 	<image src="../../images/bottom.png"></image>

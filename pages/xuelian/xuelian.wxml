@@ -2,25 +2,19 @@
 	<image src="../../images/bg2.jpg"></image>
 </view>
 <view class="container">
-	<view class="c-title">
-		关于开展廉政主题党日的通知
-	</view>
-	<view class="c-context">
-    <text decode="{{true}}" space="{{true}}">
-		街道各党组织：
-		{{space}}为进一步加强党风廉政建设，增强广大党员的廉洁意识，营造风清气正的氛围，结合今年“510”尚廉日主题宣教活动安排，根据疫情防控实际，请认真组织党员开展“不忘初心，廉洁奉公勇担当”主题党日，现将有关事项通知如下：
-		{{space}}一、学习对象
-		{{space}}街道下属各级党组织党员。
-		{{space}}二、学习时间
-		{{space}}2020年5月至7月。
-		{{space}}三、学习内容和形式
-		{{space}}1. 组织学习《中国共产党章程》及《中国共产党纪律处分条例》《中国共产党党内监督条例》《中国共产党问责条例》《中国共产党廉洁自律准则》等党内法规制度。
-		{{space}}2. 组织收看《国家监察》《永远在路上》等廉政专题教育片。
-		{{space}}3. 在组织集中学习的同时，进一步丰富学习形式，结合自身学习成果和工作生活，开展专题大讨论，撰写学习心得。
-		{{space}}四、学习要求
-		{{space}}请各党组织负责人在今年7月31日前，认真组织开展一次主题党日，进一步提高全体党员的政治站位和政治觉悟。并留存活动图片文字、新闻等资料，活动结束后报送纪工委。
-	</text>
-    </view>
+	<scroll-view bindscrolltolower='loadList' style="width:100%; height:100%" scroll-y="{{true}}">
+		<view class="list-wrap">
+			<view class="list-item" wx:for='{{list}}' wx:key="index" bindtap="toDetails" data-id="{{item.id}}">
+				<view class="item-tit">
+					[{{item.title}}]
+				</view>
+				<view class="item-des">
+					<view>{{item.name}}</view>
+					<view>{{item.create_at}}</view>
+				</view>
+			</view>
+		</view>
+	</scroll-view>
 </view>
 <view class="bot">
 	<image src="../../images/bottom.png"></image>
