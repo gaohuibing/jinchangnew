@@ -3,14 +3,17 @@
     "pages/index/index",
     "pages/guanlian/guanlian",
     "pages/xuelian/xuelian",
+    "pages/xuelian/details/details",
     "pages/xunlian/xunlian",
+    "pages/xunlian/details/details",
     "pages/jianlian/jianlian",
+    "pages/jianlian/details/details",
     "pages/youlian/youlian"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "廉政",
+    "navigationBarTitleText": "",
     "navigationBarTextStyle":"black"
   },
   "style": "v2",
