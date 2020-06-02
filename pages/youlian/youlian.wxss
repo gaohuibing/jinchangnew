@@ -1,6 +1,10 @@
 /* pages/youlian/youlian.wxss */
 .map {
     width: 750rpx;
-    height: 529rpx;
+    height: 629rpx;
     margin-top:140rpx
+}
+.container{
+    overflow-y: hidden;
+    bottom: 0;
 }

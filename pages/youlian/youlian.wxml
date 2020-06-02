@@ -11,7 +11,7 @@
 		</text>
 	</view>
     <view class="map" bindtap="miniLink">
-        <image src="../../images/map.jpg"></image>
+        <!-- <image src="../../images/map.jpg"></image> -->
     </view>
 </view>
 <view class="bot">
