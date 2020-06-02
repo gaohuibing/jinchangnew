@@ -4,6 +4,9 @@ const moment = require('./utils/moment')
 App({
   $moment: moment,
   onLaunch: function () {
+    
+  },
+  onShow() {
     if (wx.canIUse('getUpdateManager')) {
       const updateManager = wx.getUpdateManager()
       updateManager.onCheckForUpdate(function (res) {

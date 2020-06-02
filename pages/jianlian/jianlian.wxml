@@ -16,6 +16,6 @@
 		</view>
 	</scroll-view>
 </view>
-<view class="bot">
+<!-- <view class="bot">
 	<image src="../../images/bottom.png"></image>
-</view>
+</view> -->
